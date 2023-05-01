@@ -1,0 +1,14 @@
+version: '3'
+services:
+  credit-worthiness:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: credit-score-service
+    environment:
+      DEBUG: 'true'
+    ports:
+      - "5050:5050"  
+    volumes:
+      - ./:/credit-score
