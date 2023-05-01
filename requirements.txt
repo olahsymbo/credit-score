@@ -2,3 +2,4 @@ sklearn
 flask
 requests
 gunicorn
+pandas
