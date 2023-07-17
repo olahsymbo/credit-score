@@ -11,4 +11,4 @@ WORKDIR /credit-score
 COPY . /credit-score      
 RUN pip3 install -r requirements.txt 
 EXPOSE 5050
-CMD exec gunicorn --bind :$PORT --workers 4 --threads 8 wsgi:app
+CMD exec gunicorn --bind :5050 --workers 4 --threads 8 wsgi:app

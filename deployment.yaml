@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: creditscore-deployment
+spec:
+  selector:
+    matchLabels:
+      app: credit-web-kb
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: credit-web-kb
+    spec:
+      containers:
+      — name: credit-web-kb
+        image: olahsymbo/credit-score:latest
+        ports:
+        — containerPort: 5050
+
+
